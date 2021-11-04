@@ -9,7 +9,7 @@ TypeScript 类型收窄就是从宽类型转换成窄类型的过程。
 ``` javascript
 // Type is htmlElement | null
 const el = document.getElementById('foo');
-if (el) {
+if (el) { // 称为类型保护的特殊代码提示
     // Type is htmlElement
     el.innerHTML = 'TypeScript';
 } else {
@@ -31,3 +31,5 @@ if (!el) throw new Error('找不到id为foo的元素');
 // Type is HTMLElement
 el.innerHTML = 'TypeScript';
 ```
+
+TypeScript

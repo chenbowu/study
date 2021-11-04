@@ -1,18 +1,20 @@
 // interface pay {
 // }
-// class WxPay {
-//     constructor() {
-//     }
+var myTest = function myDate(n) {
+    if (this instanceof myDate) {
+        return new Date(n);
+    }
+    else {
+        return n ? n : 0;
+    }
+};
+// function MyDate(s: string) {
+//   if(s && new.target) {
+//     return new Date();
+//   }
 // }
-// function firstElement<Type> (arr: Type): Type | undefined {
+// function MyDate(n?: number): number | undefined {
+//   if(n != null) {
+//     return n;
+//   }
 // }
-// function fn(x: string): string {
-//     console.log(x);
-//     return x;
-// } 
-// fn('Hello World!');
-var el = document.getElementById('foo');
-if (!el)
-    throw new Error('找不到id为foo的元素');
-// Type is HTMLElement
-el.innerHTML = 'TypeScript';

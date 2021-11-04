@@ -10,7 +10,6 @@
 //   }
 //   return padding + input;
 // }
-
 // In JavaScript, null of type object
 // TODO 需要注意的是，在 JavaScript 中 null 也是 object 类型，所以 TypeScript 推断出 strs 的类型为 string[] | null。
 // function printAll(strs: string | string[] | null) {
@@ -39,11 +38,10 @@
 //   }
 //   return "Nobody's here. :(";
 // }
-
 // both of these result in 'true'
-let type1 = Boolean("hello"); // type: boolean, value: true
+var type1 = Boolean("hello"); // type: boolean, value: true
 // TODO 为什么 type 是 Boolean 而不是 true
-let type = !!"world"; // type: true,    value: true
+var type = !!"world"; // type: true,    value: true
 // function printAll(strs: string | string[] | null) {
 //   // !!!!!!!!!!!!!!!!
 //   //  DON'T DO THIS!
@@ -71,17 +69,15 @@ let type = !!"world"; // type: true,    value: true
 //     return values.map((x) => x * factor);
 //   }
 // }
-
-function example(x: string | number, y: string | boolean) {
-  if (x === y) {
-    // TODO 因为 string 是 x 和 y 都可以接受的唯一通用类型，所以 TypeScript 知道第一个分支中的字符必须是字符串。
-    // We can now call any 'string' method on 'x' or 'y'.
-    x.toUpperCase();
-
-    y.toLowerCase();
-
-  } else {
-    console.log(x);
-    console.log(y);
-  }
+function example(x, y) {
+    if (x === y) {
+        // TODO 因为 string 是 x 和 y 都可以接受的唯一通用类型，所以 TypeScript 知道第一个分支中的字符必须是字符串。
+        // We can now call any 'string' method on 'x' or 'y'.
+        x.toUpperCase();
+        y.toLowerCase();
+    }
+    else {
+        console.log(x);
+        console.log(y);
+    }
 }
