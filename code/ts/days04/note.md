@@ -47,4 +47,5 @@ function greet(person: Person) {
 
 ``` javascript
 // 在属性名后天添加 `?` 号，该参数就会被指定为可选参数。
+
 ```
